@@ -72,41 +72,6 @@ docker run -it --rm --name redis --net redis -v ${PWD}/config:/etc/redis/ -v red
 
 ```
 
-
-## Redis client application
-
-An example application that reads a key from Redis, increments it and writes it back to Redis.
-
-```
-cd .\storage\redis\applications\client\
-
-# start go dev environment
-docker run -it -v ${PWD}:/go/src -w /go/src --net redis -p 80:80 golang:1.14-alpine
-
-go build client.go
-# start the app
-./client
-
-# build the container
-docker build . -t aimvector/redis-client:v1.0.0
-
-```
-
-Run our application
-
-```
-cd .\storage\redis\applications\client\
-docker build . -t aimvector/redis-client:v1.0.0
-
-docker run -it --net redis `
--e REDIS_HOST=redis `
--e REDIS_PORT=6379 `
--e REDIS_PASSWORD="SuperSecretSecureStrongPass" `
--p 80:80 `
-aimvector/redis-client:v1.0.0
-
-```
-
 ## Redis Replication and High Availability
 
 Lets move on to the [clustering](./clustering/readme.md) secion.

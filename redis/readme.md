@@ -1,3 +1,31 @@
+# Setting Redis up on top of Kubernetes. 
+
+Foobar is a Python library for dealing with word pluralization.
+
+## Requirement
+
+
+1.	Docker installation:
+```linux
+$ sudo apt update 
+$ sudo apt install docker.io
+$ sudo systemctl start docker 
+$ sudo systemctl enable docker
+```
+
+2.	Disable the firewall
+
+$ sudo ufw disable
+
+3.	Kubernetes installation: 
+
+
+```bash
+pip install foobar
+```
+
+
+
 # Redis 
 
 ## Docker 

@@ -7,10 +7,10 @@ Foobar is a Python library for dealing with word pluralization.
 
 1.	Docker installation:
 ```bash
-$ sudo apt update 
-$ sudo apt install docker.io
-$ sudo systemctl start docker 
-$ sudo systemctl enable docker
+sudo apt update 
+sudo apt install docker.io
+sudo systemctl start docker 
+sudo systemctl enable docker
 ```
 
 2.	Disable the firewall
